@@ -10,6 +10,9 @@ import com.seekting.dragdrop.DragController;
 import com.seekting.dragdrop.DragRender;
 import com.seekting.dragdrop.DragSource;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements DragRender<Integer> {
 
     private DragController mDragController;
@@ -41,10 +44,17 @@ public class MainActivity extends AppCompatActivity implements DragRender<Intege
         };
         mTop.setOnLongClickListener(mListener);
         mBottom.setOnLongClickListener(mListener);
-        for (int i = 0; i < 6; i++) {
+        List<Integer> items = new ArrayList<>();
+        items.add(R.mipmap.p_1);
+        items.add(R.mipmap.p_2);
+        items.add(R.mipmap.p_3);
+        items.add(R.mipmap.p_4);
+        items.add(R.mipmap.p_5);
+        items.add(R.mipmap.p_6);
+        for (int i = 0; i < items.size(); i++) {
             ImageView im = new MyDragSource(this);
-            im.setImageResource(R.mipmap.ic_launcher);
-            im.setTag(R.mipmap.ic_launcher);
+            im.setImageResource(items.get(i));
+            im.setTag(items.get(i));
             mTop.addView(im);
 
 
