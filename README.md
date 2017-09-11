@@ -1,3 +1,3 @@
 
 
-![demo](img/device-2017-09-11-183537)
+![demo](img/device-2017-09-11-183537.gif)
